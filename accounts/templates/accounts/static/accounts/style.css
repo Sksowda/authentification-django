@@ -1,0 +1,109 @@
+/* Style global pour tout le site (Fond bleu profond) */
+body {
+    background-color: #1e3a8a; /* Bleu profond pour tout le fond de l'écran */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Carte centrale d'interaction (Blanc élégant avec ombre) */
+.auth-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Titres */
+.auth-container h2 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Formulaires */
+form p {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #475569;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #2563eb;
+}
+
+/* Boutons d'action */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb; /* Bleu dynamique */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Liens et messages */
+.auth-links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.auth-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Messages d'information / Succès / Erreur */
+.messages {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.messages p {
+    margin: 0;
+    font-size: 14px;
+    color: #1d4ed8;
+    text-align: center;
+}

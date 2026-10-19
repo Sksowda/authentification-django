@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Espace Sécurisé</title>
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Bienvenue, {{ user.username }} ! 👋</h2>
+
+        <p style="margin: 20px 0; color: #4b5563;">
+            Vous êtes connecté à votre espace sécurisé.
+        </p>
+
+        {% if messages %}
+            <div class="messages" style="margin-bottom: 15px;">
+                {% for message in messages %}
+                    <p style="color: #2563eb;">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="auth-links" style="margin-top: 20px;">
+            <form action="{% url 'logout' %}" method="POST" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" style="background-color: #dc2626; margin-top: 10px;">Se déconnecter</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
